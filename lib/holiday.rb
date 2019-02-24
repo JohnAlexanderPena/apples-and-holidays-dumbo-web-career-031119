@@ -28,7 +28,7 @@ end
 
 
 def add_supply_to_memorial_day(holiday_hash, supply)
- holiday_hash.update(“items” => stats[“items”].reject{|item| item == “key”})
+ holiday_hash[:spring].update(“items” => stats[“items”].reject{|item| item == “key”})
   end 
 end
 
