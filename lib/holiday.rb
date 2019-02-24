@@ -28,10 +28,12 @@ end
 
 
 def add_supply_to_memorial_day(holiday_hash, supply)
- holiday_hash[:spring].update(:memorial_day => :spring[:memorial_day].insert{|item| item == supply})
+  holiday_hash[:spring].each do |holiday, value|
+    value << supply 
+  end 
 end
 
-def add_new_holiday_with_supplies(holiday_hash, season, supply_array)
+def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
   # code here
   # remember to return the updated hash
 
