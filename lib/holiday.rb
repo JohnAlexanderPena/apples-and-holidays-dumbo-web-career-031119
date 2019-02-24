@@ -37,6 +37,7 @@ def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_arr
   holiday_hash.each do |key, value|
     if season == :fall 
       [:fall].each do |key , value|
+        value.merge! 
 end
 
 def all_winter_holiday_supplies(holiday_hash)
