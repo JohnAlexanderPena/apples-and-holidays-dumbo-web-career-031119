@@ -22,7 +22,7 @@ end
 
 def add_supply_to_winter_holidays(holiday_hash, supply)
   holiday_hash[:winter].each do |holiday,value|
-    value << supply
+    [value] << supply
   end 
 end
 
@@ -36,8 +36,10 @@ end
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
   holiday_hash.each do |key, value|
     if key == :fall 
-        value << holiday_name
-        
+        key.each do |holiday, supply|
+          key[holiday_name] = supply_array
+        end
+      end 
   end 
 end
 
