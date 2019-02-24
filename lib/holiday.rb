@@ -35,9 +35,7 @@ end
 
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
   holiday_hash.each do |key, value|
-    if season == :fall 
-      [:fall].each do |key , value|
-        value.merge!([:columbus_day => )
+    if season == :fal
       end 
     end 
 end
